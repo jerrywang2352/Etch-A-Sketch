@@ -1,9 +1,9 @@
 let container = document.querySelector("div.container"); 
 const slider = document.querySelector("input[type=range]");
 const sliderOutput = document.querySelector(".grid-size"); 
-
-container.style.width = "500px";
-container.style.height = "500px"; 
+const containerSize = 500
+container.style.width = containerSize + "px";
+container.style.height = containerSize + "px";
 let slideVal = slider.value;  
 makeGrid(slideVal); 
 
@@ -22,8 +22,8 @@ document.querySelector(".container").onmouseup = () => isDown = false;
 
 //function that creates the grid 
 function makeGrid(size) {
-    const width = Math.floor(500/size);
-    const height = Math.floor(500/size);
+    const width = Math.floor(containerSize/size);
+    const height = Math.floor(containerSize/size);
     while(container.firstElementChild) {
         container.firstElementChild.remove();
     }
@@ -42,7 +42,7 @@ function makeGrid(size) {
     //etch if mouse down and over
     const squareDivs = document.querySelectorAll(".square-div");
     squareDivs.forEach((squareDiv) => { 
-       squareDiv.addEventListener("mouseenter",(e) => {
+       squareDiv.addEventListener("mouseover",(e) => {
         if (isDown) {
             e.target.style.backgroundColor = "gray"; 
         }
