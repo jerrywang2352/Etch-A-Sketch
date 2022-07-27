@@ -1,11 +1,15 @@
 .ui {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .container {
-   display:grid;
-   grid-template-rows: repeat(16,50px);
-   grid-template-columns: repeat(16, 50px); 
+   display:flex;
+   flex-direction: column;
+}
+
+.row {
+    display: flex;
 }
 
 .square-div {
