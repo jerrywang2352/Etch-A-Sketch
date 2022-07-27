@@ -1,13 +1,13 @@
+.ui {
+    display: flex;
+    justify-content: center;
+}
 .container {
    display:grid;
    grid-template-rows: repeat(16,50px);
    grid-template-columns: repeat(16, 50px); 
-
 }
+
 .square-div {
     border: 1px solid gray; 
-}
-
-.hover {
-    background-color: gray;
 }

@@ -1,4 +1,8 @@
 const container = document.querySelector("div.container"); 
+let isDown = false;
+document.querySelector(".container").onmousedown = () => isDown = true; 
+document.querySelector(".container").onmouseup = () => isDown = false;
+
 for(let i = 0; i < 16; i++) {
     for(let k = 0; k < 16; k++) {
         let squareDiv = document.createElement("div"); 
@@ -10,8 +14,11 @@ for(let i = 0; i < 16; i++) {
 }
 
 const squareDivs = document.querySelectorAll(".square-div");
-squareDivs.forEach((squareDiv) => {
-   squareDiv.addEventListener("mouseover",(e)=>
-   e.target.classList.add("hover"));  
+squareDivs.forEach((squareDiv) => { 
+   squareDiv.addEventListener("mouseenter",(e) => {
+    if (isDown) {
+        e.target.style.backgroundColor = "gray"; 
+    }
+   });
 });
 
