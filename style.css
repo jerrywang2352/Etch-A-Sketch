@@ -1,8 +1,13 @@
+body {
+    background-color: #ededed;
+}
+
 .ui {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .container {
    display:flex;
    flex-direction: column;
@@ -14,4 +19,18 @@
 
 .square-div {
     border: 1px solid gray; 
+    background-color: white;
+}
+
+.grid-size {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    color:#333333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 64px;
+    text-align: center;
 }
